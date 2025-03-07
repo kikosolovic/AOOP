@@ -7,12 +7,16 @@ using System.IO;
 using Avalonia.Controls.Shapes;
 using Avalonia.Media;
 using Avalonia.Layout;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace AvaloniaExercises;
 
 public partial class MainWindow : Window
 {
     public char[] bitmap;
+    private Dictionary<string, Button> buttonDictionary = new Dictionary<string, Button>();
+
     public MainWindow()
     {
         InitializeComponent();
@@ -66,24 +70,64 @@ public partial class MainWindow : Window
         int res = (int.Parse(num1) + int.Parse(num2));
 
         this.FindControl<TextBox>("res").Text = res.ToString();
+        // Console.WriteLine(this.FindControl<Button>("kokot").Content);
     }
 
-    private void load(object sender, RoutedEventArgs e)
+    private void load(object sender, RoutedEventArgs e, bool flipped = false)
     {
+
+
+        var StackPanel = this.FindControl<StackPanel>("ImageStack");
+        StackPanel.Children.Clear();
+
+
         string PATH = Environment.CurrentDirectory + "/Assets/" + (this.FindControl<TextBox>("fileName").Text);
-        var textBlock = new TextBlock { Text = "kokot" };
+
+
+        if (!File.Exists(PATH))
+        {
+            Console.WriteLine("File not found");
+            return;
+        }
 
         StreamReader sr = new StreamReader(PATH);
         string text = sr.ReadToEnd();
-        char[] pr = text.ToCharArray();
         bitmap = text.ToCharArray();
-        int height = int.Parse(pr[0].ToString());
-        int width = int.Parse(pr[2].ToString());
+        int height = int.Parse(bitmap[0].ToString());
+        int width = int.Parse(bitmap[2].ToString());
+
+        if (flipped)
+        {
+            int split = 4;
+
+            char[] dimensions = new char[split];
+            char[] values = new char[bitmap.Length - split];
+
+            Array.Copy(bitmap, dimensions, split);
+            Array.Copy(bitmap, split, values, 0, bitmap.Length - split);
+
+            List<char[]> rows = new List<char[]>();
+
+            for (int i = 0; i < height; i++)
+            {
+                char[] row = new char[width];
+                Array.Copy(values, i * width, row, 0, width);
+                rows.Add(row);
+            }
+
+            rows.Reverse();
+
+            bitmap = (dimensions.Concat(rows.SelectMany(row => row)).ToArray());
 
 
 
-        Console.WriteLine(width);
-        var grid = new Grid() { Background = Brushes.White };
+        }
+        int buttonRow = height + 1;
+
+        var grid = new Grid()
+        {
+            Background = Brushes.White,
+        };
 
         for (int i = 0; i < height; i++)
         {
@@ -102,19 +146,18 @@ public partial class MainWindow : Window
         {
             for (int j = 0; j < width; j++)
             {
+                var num = start.ToString();
                 var button = new Button()
                 {
-                    Background = pr[start] == '0' ? Brushes.White : Brushes.Black,
-                    // OnClick = pr[start] == '0' ? Brushes.White : Brushes.Black,
-
+                    Background = bitmap[start] == '0' ? Brushes.White : Brushes.Black,
+                    Name = num,
                     HorizontalAlignment = HorizontalAlignment.Stretch,
                     VerticalAlignment = VerticalAlignment.Stretch,
 
+
                 };
-
-                // button.Click += (s, e) => ChangeColor(color = pr[start], id = start);
-
-                // var button = CreateButton(pr[start]);
+                button.Click += (sender, e) => changeColor(sender, e, num);
+                buttonDictionary[num] = button;
 
 
 
@@ -128,15 +171,42 @@ public partial class MainWindow : Window
 
 
 
-
-
-
-
-        this.Content = grid;
+        StackPanel.Children.Add(grid);
 
     }
-    // private void ChangeColor(string color, int id)
-    // {
-    //     bitmap[id] = color == "0" ? '1' : '0';
-    // }
+
+    private void changeColor(object sender, EventArgs e, string x)
+    {
+        if (buttonDictionary.TryGetValue(x, out Button button))
+        {
+            button.Background = bitmap[int.Parse(x)] == '1' ? Brushes.White : Brushes.Black;
+            bitmap[int.Parse(x)] = bitmap[int.Parse(x)] == '1' ? '0' : '1';
+        }
+        else
+        {
+            Console.WriteLine("Thi button is null");
+        }
+    }
+
+    private void loadFlipped(object sender, RoutedEventArgs e)
+    {
+        load(sender, e, true);
+    }
+    private void loadUnFlipped(object sender, RoutedEventArgs e)
+    {
+        load(sender, e);
+    }
+    private void export(object sender, RoutedEventArgs e)
+    {
+        string PATH = Environment.CurrentDirectory + "/Assets/" + (this.FindControl<TextBox>("fileName").Text);
+
+        string res = "";
+        foreach (var item in bitmap)
+        {
+            res = res + item.ToString();
+        }
+        // Console.WriteLine(res);
+        File.WriteAllText(PATH, res);
+    }
+
 }

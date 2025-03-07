@@ -7,7 +7,7 @@
         Title="AvaloniaExercises">
    
     <TabControl>
-        <TabItem Header="Exercise 1">
+        <!-- <TabItem Header="Exercise 1">
             <Grid RowDefinitions="*,*,*" ColumnDefinitions="*,*">
                 <Rectangle Grid.Row="0" Grid.Column="0" Fill="Red"/>
                 <Rectangle Grid.Row="0" Grid.Column="1" Fill="Blue"/>
@@ -57,21 +57,28 @@
                 <TextBlock Text="Result:" />
                 <TextBox Name="res" />
                 
-                <Button Content="Add" Click="add" />
+                <Button Content="Add" Click="add" Name="kokot"/>
                 
-                <!-- <Button Content="Substract" Click="substract" />
-                
-                <Button Content="Multiply" Click="multiply" /> -->
-
-
-                <!-- <Button Content="Show Image" Click="Exercise4ShowImage_Click" /> -->
             </StackPanel>
-        </TabItem><TabItem Header="b2img">
-            <StackPanel Margin="20" Spacing="10">
+        </TabItem> -->
+        
+        <TabItem Header="b2img">
+<StackPanel>
+
                 <TextBlock Text="Entoer file name:" />
                 <TextBox Text="smile.b2img.txt" Name="fileName"/>
-                <Button Content="load" Click="load"/>
+                <Grid ColumnDefinitions="*,*,*">
+                <Button Content="load" Click="loadUnFlipped" Grid.Row="0" Grid.Column="0"/>
+                <Button Content="load and flip" Click="loadFlipped" Grid.Row="0" Grid.Column="1"/>
+                <Button Content="save" Click="export" Grid.Row="0" Grid.Column="2"/>
+                    </Grid>
+                 
+            <StackPanel  Name="ImageStack" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
             </StackPanel>
+    </StackPanel>
+                    
+                
+
         </TabItem>
     </TabControl>
 </Window>
