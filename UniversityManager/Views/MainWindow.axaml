@@ -16,8 +16,24 @@
     </Design.DataContext>
 
 <StackPanel>
+
+    <DockPanel>
+
+    <Menu DockPanel.Dock="Top">
+
+      <MenuItem Header="_Subjects" IsVisible="{Binding isStudent}">
+        <MenuItem Header="_Available Subjects" Command="{Binding showSubjects}"/>
+        <Separator/>
+      </MenuItem>
+
+    </Menu>
+
+    <TextBlock/>
+
+  </DockPanel>
     <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     
-    <Button Click="showLogin"> Suck </Button>
+        <ContentControl Content="{Binding CurrentView}"/>
+    <!-- <Button Click="showLogin"> Suck </Button> -->
     </StackPanel>
 </Window>

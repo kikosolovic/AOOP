@@ -19,7 +19,7 @@ public partial class Login : Window
     private async void ShowCustomMessageBox()
     {
         var customMessageBox = new CustomMessageBox();
-        await customMessageBox.ShowDialog(this); // Open as modal
+        await customMessageBox.ShowDialog(this);
     }
     public void verify(object sender, RoutedEventArgs args)
     {

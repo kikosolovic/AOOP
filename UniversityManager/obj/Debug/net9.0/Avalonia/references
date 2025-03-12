@@ -30,6 +30,7 @@
 /home/kikosolovic/.nuget/packages/avalonia.xaml.interactions.responsive/11.2.0.14/lib/net8.0/Avalonia.Xaml.Interactions.Responsive.dll
 /home/kikosolovic/.nuget/packages/avalonia.xaml.interactivity/11.2.0.14/lib/net8.0/Avalonia.Xaml.Interactivity.dll
 /home/kikosolovic/.nuget/packages/communitytoolkit.mvvm/8.2.1/lib/net6.0/CommunityToolkit.Mvvm.dll
+/home/kikosolovic/.nuget/packages/dynamicdata/9.0.4/lib/net8.0/DynamicData.dll
 /home/kikosolovic/.nuget/packages/harfbuzzsharp/7.3.0.2/lib/net6.0/HarfBuzzSharp.dll
 /home/kikosolovic/.nuget/packages/messagebox.avalonia/1.0.0/lib/netstandard2.0/MessageBox.Avalonia.dll
 /home/kikosolovic/.nuget/packages/microcom.runtime/0.11.0/lib/net5.0/MicroCom.Runtime.dll
@@ -40,7 +41,9 @@
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/Microsoft.Win32.Registry.dll
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/mscorlib.dll
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/netstandard.dll
+/home/kikosolovic/.nuget/packages/reactiveui/20.1.63/lib/net8.0/ReactiveUI.dll
 /home/kikosolovic/.nuget/packages/skiasharp/2.88.8/lib/net6.0/SkiaSharp.dll
+/home/kikosolovic/.nuget/packages/splat/15.1.1/lib/net8.0/Splat.dll
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/System.AppContext.dll
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/System.Buffers.dll
 /home/kikosolovic/.dotnet/packs/Microsoft.NETCore.App.Ref/9.0.2/ref/net9.0/System.Collections.Concurrent.dll

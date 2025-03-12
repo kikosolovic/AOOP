@@ -2,8 +2,8 @@
     {
       "Id": 1,
       "Name": "John Doe",
-      "Username": "johndoe",
-      "Password": "password123",
+      "Username": "1",
+      "Password": "1",
       "EnrolledSubjects": [101, 102, 103]
     },
     {

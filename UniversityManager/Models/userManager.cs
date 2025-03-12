@@ -8,15 +8,16 @@ using UniversityManager.Models;
 
 namespace UniversityManager.Models
 {
-    public class userManager
+    public static class userManager
     {
-        public List<Student> students = new List<Student>();
-        public List<Subject> subjects = new List<Subject>();
-        public List<Teacher> teachers = new List<Teacher>();
+        public static List<Student> students = new List<Student>();
+        public static List<Subject> subjects = new List<Subject>();
+        public static List<Teacher> teachers = new List<Teacher>();
 
-        public void loadData()
+        public static user? currentUser = null;
+
+        public static void loadData()
         {
-
             string json = File.ReadAllText("Assets/users/students.json");
             students = JsonSerializer.Deserialize<List<Student>>(json);
             json = File.ReadAllText("Assets/users/teachers.json");
@@ -25,9 +26,14 @@ namespace UniversityManager.Models
             subjects = JsonSerializer.Deserialize<List<Subject>>(json);
 
         }
-        public void saveData()
+        public static void saveData()
         {
-
+            string json = JsonSerializer.Serialize(students, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText("Assets/users/students.json", json);
+            json = JsonSerializer.Serialize(teachers, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText("Assets/users/teachers.json", json);
+            json = JsonSerializer.Serialize(subjects, new JsonSerializerOptions { WriteIndented = true });
+            File.WriteAllText("Assets/users/subjects.json", json);
         }
     }
 }
