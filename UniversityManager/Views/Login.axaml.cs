@@ -1,0 +1,44 @@
+using Avalonia;
+using Avalonia.Controls;
+using Avalonia.Interactivity;
+using Avalonia.Markup.Xaml;
+using System;
+using UniversityManager.ViewModels;
+using MessageBox.Avalonia;
+using MessageBox.Avalonia.Enums;
+
+
+namespace UniversityManager.Views;
+
+public partial class Login : Window
+{
+    public Login()
+    {
+        InitializeComponent();
+    }
+    private async void ShowCustomMessageBox()
+    {
+        var customMessageBox = new CustomMessageBox();
+        await customMessageBox.ShowDialog(this); // Open as modal
+    }
+    public void verify(object sender, RoutedEventArgs args)
+    {
+        var username = this.username.Text;
+        var password = this.password.Text;
+
+        LoginViewModel log = new LoginViewModel();
+        if (log.checkCredentials(username, password))
+        {
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+
+            this.Close();
+        }
+        else
+        {
+            ShowCustomMessageBox();
+        }
+
+
+    }
+}

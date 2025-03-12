@@ -12,4 +12,28 @@
     <Application.Styles>
         <FluentTheme />
     </Application.Styles>
+      <Application.Resources>
+    <ControlTheme x:Key="EllipseButton" TargetType="Button">
+      <Setter Property="Background" Value="Blue"/>
+      <Setter Property="Foreground" Value="Yellow"/>
+      <Setter Property="Padding" Value="8"/>
+      <Setter Property="Template">
+        <ControlTemplate>
+          <Panel>
+            <Ellipse Fill="{TemplateBinding Background}"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"/>
+            <ContentPresenter x:Name="PART_ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              Margin="{TemplateBinding Padding}"/>
+          </Panel>
+        </ControlTemplate>
+      </Setter>
+      
+      <Style Selector="^:pointerover">
+        <Setter Property="Background" Value="Red"/>
+        <Setter Property="Foreground" Value="White"/>
+      </Style>
+    </ControlTheme>
+  </Application.Resources>
 </Application>

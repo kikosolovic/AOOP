@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roman\\OneDrive\\Desktop\\Uni\\2ndSem\\OOP\\02-Home\\UniversityManager\\UniversityManager.csproj": {}
+    "/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/UniversityManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roman\\OneDrive\\Desktop\\Uni\\2ndSem\\OOP\\02-Home\\UniversityManager\\UniversityManager.csproj": {
+    "/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/UniversityManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roman\\OneDrive\\Desktop\\Uni\\2ndSem\\OOP\\02-Home\\UniversityManager\\UniversityManager.csproj",
+        "projectUniqueName": "/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/UniversityManager.csproj",
         "projectName": "UniversityManager",
-        "projectPath": "C:\\Users\\roman\\OneDrive\\Desktop\\Uni\\2ndSem\\OOP\\02-Home\\UniversityManager\\UniversityManager.csproj",
-        "packagesPath": "C:\\Users\\roman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roman\\OneDrive\\Desktop\\Uni\\2ndSem\\OOP\\02-Home\\UniversityManager\\obj\\",
+        "projectPath": "/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/UniversityManager.csproj",
+        "packagesPath": "/home/kikosolovic/.nuget/packages/",
+        "outputPath": "/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\roman\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/kikosolovic/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.100"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net9.0": {
@@ -70,9 +64,17 @@
               "target": "Package",
               "version": "[11.2.1, )"
             },
+            "Avalonia.Xaml.Behaviors": {
+              "target": "Package",
+              "version": "[11.2.0.14, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.2.1, )"
+            },
+            "MessageBox.Avalonia": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [
@@ -91,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kikosolovic/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
