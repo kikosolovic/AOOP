@@ -1,0 +1,73 @@
+[
+    {
+      "Id": 101,
+      "Name": "Mathematics",
+      "Description": "Advanced mathematics course.",
+      "TeacherId": 1,
+      "StudentsEnrolled": [1, 2, 3]
+    },
+    {
+      "Id": 102,
+      "Name": "Physics",
+      "Description": "Introductory physics course.",
+      "TeacherId": 2,
+      "StudentsEnrolled": [1, 4, 5]
+    },
+    {
+      "Id": 103,
+      "Name": "Chemistry",
+      "Description": "Fundamentals of chemistry.",
+      "TeacherId": 3,
+      "StudentsEnrolled": [2, 6, 7]
+    },
+    {
+      "Id": 104,
+      "Name": "Biology",
+      "Description": "Biology: the study of life.",
+      "TeacherId": 4,
+      "StudentsEnrolled": [3, 5, 8]
+    },
+    {
+      "Id": 105,
+      "Name": "History",
+      "Description": "World history course.",
+      "TeacherId": 5,
+      "StudentsEnrolled": [4, 6, 9]
+    },
+    {
+      "Id": 106,
+      "Name": "English Literature",
+      "Description": "Study of classic literature.",
+      "TeacherId": 6,
+      "StudentsEnrolled": [5, 7, 10]
+    },
+    {
+      "Id": 107,
+      "Name": "Computer Science",
+      "Description": "Introductory course in computer science.",
+      "TeacherId": 7,
+      "StudentsEnrolled": [1, 4, 6]
+    },
+    {
+      "Id": 108,
+      "Name": "Philosophy",
+      "Description": "Philosophical concepts and thinkers.",
+      "TeacherId": 8,
+      "StudentsEnrolled": [2, 5, 7]
+    },
+    {
+      "Id": 109,
+      "Name": "Psychology",
+      "Description": "Understanding the human mind.",
+      "TeacherId": 9,
+      "StudentsEnrolled": [3, 6, 8]
+    },
+    {
+      "Id": 110,
+      "Name": "Sociology",
+      "Description": "Study of society and social behavior.",
+      "TeacherId": 10,
+      "StudentsEnrolled": [4, 7, 9]
+    }
+  ]
+  

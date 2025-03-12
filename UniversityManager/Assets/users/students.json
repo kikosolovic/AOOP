@@ -1,0 +1,73 @@
+[
+    {
+      "Id": 1,
+      "Name": "John Doe",
+      "Username": "johndoe",
+      "Password": "password123",
+      "EnrolledSubjects": [101, 102, 103]
+    },
+    {
+      "Id": 2,
+      "Name": "Jane Smith",
+      "Username": "janesmith",
+      "Password": "password456",
+      "EnrolledSubjects": [104, 105]
+    },
+    {
+      "Id": 3,
+      "Name": "Alice Johnson",
+      "Username": "alicej",
+      "Password": "password789",
+      "EnrolledSubjects": [106, 107]
+    },
+    {
+      "Id": 4,
+      "Name": "Bob Brown",
+      "Username": "bobbrown",
+      "Password": "password012",
+      "EnrolledSubjects": [101, 108]
+    },
+    {
+      "Id": 5,
+      "Name": "Charlie Davis",
+      "Username": "charlied",
+      "Password": "password345",
+      "EnrolledSubjects": [102, 104]
+    },
+    {
+      "Id": 6,
+      "Name": "David Clark",
+      "Username": "davidc",
+      "Password": "password678",
+      "EnrolledSubjects": [109, 110]
+    },
+    {
+      "Id": 7,
+      "Name": "Eve Evans",
+      "Username": "eveevans",
+      "Password": "password901",
+      "EnrolledSubjects": [111, 112]
+    },
+    {
+      "Id": 8,
+      "Name": "Frank Harris",
+      "Username": "frankh",
+      "Password": "password234",
+      "EnrolledSubjects": [113, 114]
+    },
+    {
+      "Id": 9,
+      "Name": "Grace Miller",
+      "Username": "gracem",
+      "Password": "password567",
+      "EnrolledSubjects": [115, 116]
+    },
+    {
+      "Id": 10,
+      "Name": "Helen Wilson",
+      "Username": "helenw",
+      "Password": "password890",
+      "EnrolledSubjects": [117, 118]
+    }
+  ]
+  

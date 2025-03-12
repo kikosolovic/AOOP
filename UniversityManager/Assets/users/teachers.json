@@ -1,0 +1,73 @@
+[
+    {
+      "Id": 1,
+      "Name": "Dr. John Smith",
+      "Username": "johnsmith",
+      "Password": "password123",
+      "Subjects": [101, 102]
+    },
+    {
+      "Id": 2,
+      "Name": "Dr. Jane Williams",
+      "Username": "janewilliams",
+      "Password": "password456",
+      "Subjects": [103, 104]
+    },
+    {
+      "Id": 3,
+      "Name": "Dr. Alan Brown",
+      "Username": "alanbrown",
+      "Password": "password789",
+      "Subjects": [105, 106]
+    },
+    {
+      "Id": 4,
+      "Name": "Dr. Emily Davis",
+      "Username": "emilydavis",
+      "Password": "password012",
+      "Subjects": [107, 108]
+    },
+    {
+      "Id": 5,
+      "Name": "Dr. Michael Johnson",
+      "Username": "michaeljohnson",
+      "Password": "password345",
+      "Subjects": [109, 110]
+    },
+    {
+      "Id": 6,
+      "Name": "Dr. Sarah Lee",
+      "Username": "sarahlee",
+      "Password": "password678",
+      "Subjects": [101, 109]
+    },
+    {
+      "Id": 7,
+      "Name": "Dr. David Clark",
+      "Username": "davidclark",
+      "Password": "password901",
+      "Subjects": [102, 106]
+    },
+    {
+      "Id": 8,
+      "Name": "Dr. Laura Adams",
+      "Username": "lauraadams",
+      "Password": "password234",
+      "Subjects": [103, 110]
+    },
+    {
+      "Id": 9,
+      "Name": "Dr. Brian Harris",
+      "Username": "brianharris",
+      "Password": "password567",
+      "Subjects": [104, 107]
+    },
+    {
+      "Id": 10,
+      "Name": "Dr. Nancy White",
+      "Username": "nancywhite",
+      "Password": "password890",
+      "Subjects": [105, 108]
+    }
+  ]
+  

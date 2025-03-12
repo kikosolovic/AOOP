@@ -1,5 +1,7 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using UniversityManager.Models;
 
 namespace UniversityManager.Views;
 
@@ -12,10 +14,9 @@ public partial class MainWindow : Window
     public void showLogin(object sender, RoutedEventArgs args)
 
     {
-        var loginWindow = new Login();
-        loginWindow.Show();
-
-        this.Close();
+        userManager userManager = new userManager();
+        userManager.loadData();
+        Console.WriteLine(userManager.teachers[1].Name);
 
     }
 }
