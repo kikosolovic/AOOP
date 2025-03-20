@@ -5,11 +5,11 @@ using UniversityManager.ViewModels;
 
 namespace UniversityManager.Views;
 
-public partial class Subjects : Window
+public partial class SubjectDetails : UserControl
 {
-    public Subjects()
+    public SubjectDetails()
     {
         InitializeComponent();
-        DataContext = new SubjectsViewModel();
+        DataContext = new SubjectDetailsViewModel();
     }
 }

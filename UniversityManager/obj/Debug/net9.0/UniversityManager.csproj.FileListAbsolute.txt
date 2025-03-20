@@ -75,6 +75,6 @@
 /home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/Debug/net9.0/UniversityManager.genruntimeconfig.cache
 /home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/Debug/net9.0/ref/UniversityManager.dll
 /home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/bin/Debug/net9.0/MessageBox.Avalonia.dll
-/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/Debug/net9.0/UniversityManager.dll
-/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/Debug/net9.0/refint/UniversityManager.dll
-/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/obj/Debug/net9.0/UniversityManager.pdb
+/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/bin/Debug/net9.0/DynamicData.dll
+/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/bin/Debug/net9.0/ReactiveUI.dll
+/home/kikosolovic/Downloads/Avalonia Introduction/avalonia-introduction-master/UniversityManager/bin/Debug/net9.0/Splat.dll

@@ -27,6 +27,10 @@ public partial class App : Application
             {
                 DataContext = new LoginViewModel(),
             };
+            // desktop.MainWindow = new MainWindow
+            // {
+            //     DataContext = new MainWindowViewModel(),
+            // };
         }
 
         base.OnFrameworkInitializationCompleted();

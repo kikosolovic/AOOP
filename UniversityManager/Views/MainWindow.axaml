@@ -20,20 +20,22 @@
     <DockPanel>
 
     <Menu DockPanel.Dock="Top">
-
-      <MenuItem Header="_Subjects" IsVisible="{Binding isStudent}">
+<!-- IsVisible="{Binding isStudent}" -->
+      <MenuItem Header="_Subjects" >
         <MenuItem Header="_Available Subjects" Command="{Binding showSubjects}"/>
+        <!-- <MenuItem Header="_Enrolled Subjects" Command="{Binding showSubjects}"/> -->
         <Separator/>
       </MenuItem>
-
     </Menu>
-
     <TextBlock/>
-
   </DockPanel>
+
     <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
     
-        <ContentControl Content="{Binding CurrentView}"/>
-    <!-- <Button Click="showLogin"> Suck </Button> -->
+
+          <ContentControl Content="{Binding CurrentView}" />
+
+
     </StackPanel>
 </Window>
+<!-- {Binding CurrentView} -->
