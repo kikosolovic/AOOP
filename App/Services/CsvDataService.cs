@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using App.Models;
+using FoodWasteViz.Models;
 using CsvHelper;
 using CsvHelper.Configuration;
 
-namespace App.Services;
+namespace FoodWasteViz.Services;
 
 public interface IDataService
 {

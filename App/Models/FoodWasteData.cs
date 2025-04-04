@@ -1,6 +1,6 @@
 using CsvHelper.Configuration.Attributes;
 
-namespace App.Models;
+namespace FoodWasteViz.Models;
 
 public class FoodWasteData
 {

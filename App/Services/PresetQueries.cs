@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
-using App.Models;
+using FoodWasteViz.Models;
 
-namespace App.Services;
+namespace FoodWasteViz.Services;
 
 public static class PresetQueries
 {

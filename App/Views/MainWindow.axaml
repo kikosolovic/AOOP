@@ -1,20 +1,42 @@
-<Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:App.ViewModels"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="App.Views.MainWindow"
-        x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="App">
+<Window
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="https://github.com/avaloniaui"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:FoodWasteViz.ViewModels"
+    x:Class="FoodWasteViz.Views.MainWindow"
+    mc:Ignorable="d"
+    Title="Food Waste Visualizer"
+    Width="900" Height="600">
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <!-- UI content -->
+    <DockPanel Margin="10">
+        <ComboBox
+            Items="{Binding AvailableQueries}"
+            SelectedItem="{Binding SelectedQuery}"
+            Width="250"
+            Margin="0 0 0 10"
+            DockPanel.Dock="Top" />
 
+        <ItemsControl Items="{Binding ActiveCharts}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0 10">
+                        <TextBlock Text="{Binding QueryName}" FontWeight="Bold" Margin="0 0 0 5"/>
+                        <ContentControl Content="{Binding Chart}" />
+                        <Button
+                            Content="Remove"
+                            Command="{Binding DataContext.RemoveChartCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                            CommandParameter="{Binding}" 
+                            HorizontalAlignment="Right"
+                            Margin="0 5"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </DockPanel>
 </Window>

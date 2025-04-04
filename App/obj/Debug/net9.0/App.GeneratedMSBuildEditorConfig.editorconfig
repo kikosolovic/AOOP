@@ -24,5 +24,8 @@ build_property.EnableCodeStyleSeverity =
 [C:/Users/roman/OneDrive/Desktop/Uni/2ndSem/OOP/DataVisualization/App/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[C:/Users/roman/OneDrive/Desktop/Uni/2ndSem/OOP/DataVisualization/App/Views/Chart.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [C:/Users/roman/OneDrive/Desktop/Uni/2ndSem/OOP/DataVisualization/App/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
